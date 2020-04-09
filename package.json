@@ -1,0 +1,23 @@
+{
+  "name": "wons-garage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm run serve",
+    "build": "ts-node ./build",
+    "serve": "serve docs"
+  },
+  "author": "Won Song <hello@wonsong.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/html-minifier": "^3.5.3",
+    "@types/node": "^13.11.1",
+    "@types/node-sass": "^4.11.0",
+    "html-minifier": "^4.0.0",
+    "node-sass": "^4.13.1",
+    "serve": "^11.3.0",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3"
+  }
+}

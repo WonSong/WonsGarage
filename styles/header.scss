@@ -1,0 +1,67 @@
+@import './variables';
+
+.header {
+    height: 60px;
+    border-bottom: 1px solid $gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+
+    @include container; 
+    @include clearFix;
+}
+
+.brand {
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    float: left;
+    color: #333;
+}
+
+.brand-highlight {
+    font-weight: 600;
+}
+
+.menu {
+    float: right;
+    display: none;
+
+    @media(min-width: 1200px) {
+        display: block;
+    }
+}
+
+.menu-list {
+    padding-left: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-link {
+    display: block; 
+    line-height: 59px;
+    font-size: 16px;
+    text-decoration: none;
+    color: $textColor;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-bottom: 1px solid $gray;
+    transition: 0.3s ease all;
+
+    &:hover {
+        line-height: 58px;
+        color: $primaryColor;
+        border-bottom-width: 2px;
+        border-bottom-color: $primaryColor;
+    }
+}

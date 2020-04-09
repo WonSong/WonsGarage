@@ -1,0 +1,16 @@
+$primaryColor: #FF6384;
+$textColor: #333;
+$gray: #dadce0;
+
+@mixin container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@mixin clearFix {
+    &:after {
+        display: table;
+        content: ' ';
+        clear: both;
+    }
+}
