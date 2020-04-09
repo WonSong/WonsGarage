@@ -20,7 +20,7 @@ export const projects = [
             },
             {
                 text: 'Github',
-                url: 'https://github.com/wonsong'
+                url: 'https://github.com/WonSong/indivisible-by-covid19'
             }
         ]
     },
@@ -63,7 +63,7 @@ export const projects = [
             },
             {
                 text: 'Github',
-                url: 'https://github.com/wonsong'
+                url: 'https://github.com/WonSong/STONE'
             }
         ]
     },
