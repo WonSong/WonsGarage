@@ -1,40 +1,34 @@
-import { minify } from 'html-minifier';
-import { projects } from '../data/projects';
+import {minify} from 'html-minifier';
+import {projects} from '../data/projects';
 
 export function renderProjects() {
-    const result = projects.map(project => 
+    const result = projects.map(project =>
         `
             <div class="project">
                 <div class="project-image-root">
-                ${project.image ? 
-                    `<img class="project-image" src="${project.image}" />` :
-                    `
+                ${project.image ?
+            `<img class="project-image" src="${project.image}" />` :
+            `
                         <div class="project-confidential">
                             <div class="project-text">${project.confidentialText}</div>
                         </div>
-                    ` 
-                }
+                    `
+        }
                     <div class="project-overlay"></div>
                 </div>
                 <div class="project-info">
                     <div class="project-name">${project.name}</div>
                     <div class="project-meta">${project.year} | ${project.role}</div>
                     <div class="project-description">${project.description}</div>
-                    ${project.links ? 
-                        `
                             <ul class="project-links">
-                                ${project.links.map(link => 
-                                    `
+                                ${project.links.map(link =>
+            `
                                         <li class="project-link-item">
                                             <a class="project-link" href="${link.url}">${link.text}</a>
                                         </li>
                                     `
-                                ).join('')}
+        ).join('')}
                             </ul>
-                        ` : `
-                            <div class="project-nolink">${project.noLinkText}</div>
-                        `
-                    }
                 </div>
             </div>
         `
